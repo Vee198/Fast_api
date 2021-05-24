@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <!--<link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet"> -->
+</head>
+<body>
+    <div class="header">
+        <h2> {{ error_message }} </h2>
+    </div>
+
+    <form action="/website/auth" method="post">
+        <!-- username //-->
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" name="username">
+        </div>
+
+        <!-- password //-->
+         <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+
+        <div class="input-group">
+            <button type="Submit" name="login_user" class="btn">Login</button>
+        </div>
+        <p>Forgot Password<a href="updatepassword">Forgot Password</a></p>
+        <p>Not yet a member? <a href="register">Sign Up</a></p>
+    </form>
+</body>
+</html>
